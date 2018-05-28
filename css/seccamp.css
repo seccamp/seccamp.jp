@@ -1,0 +1,27 @@
+*[id]:before {
+    display: block;
+    content: " ";
+    margin-top: -64px;
+    height: 64px;
+    visibility: hidden;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 84px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 64px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid grey; 
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 16px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted grey; 
+}
+

@@ -1,108 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>seccamp.jp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/seccamp.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
+            <a class="navbar-brand" href="#">seccamp.jp</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">ホーム</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            まとめ
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#central2018">全国大会2018</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#central2017">全国大会2017</a>
+                            <a class="dropdown-item" href="#central2016">全国大会2016</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-	<title>seccamp.jp</title>
+        <div class="container">
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<style type="text/css">
-	body { padding-top: 80px; }
-	@media ( min-width: 768px ) {
-		#banner {
-			min-height: 300px;
-			border-bottom: none;
-		}
-		.bs-docs-section {
-			margin-top: 8em;
-		}
-		.bs-component {
-			position: relative;
-		}
-		.bs-component .modal {
-			position: relative;
-			top: auto;
-			right: auto;
-			left: auto;
-			bottom: auto;
-			z-index: 1;
-			display: block;
-		}
-		.bs-component .modal-dialog {
-			width: 90%;
-		}
-		.bs-component .popover {
-			position: relative;
-			display: inline-block;
-			width: 220px;
-			margin: 20px;
-		}
-		.nav-tabs {
-			margin-bottom: 15px;
-		}
-		.progress {
-			margin-bottom: 10px;
-		}
-	}
-	</style>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>seccamp.jpへようこそ！</h5>
+                            <p>このページは、セキュリティ・キャンプについての情報を<b class="text-danger">非公式に</b>まとめたものです。</p>
+                            <p>公式ページは以下のリンクから参照できます。</p>
+                            <a href="https://www.ipa.go.jp/jinzai/camp/2018/zenkoku2018_index.html" class="btn btn-outline-primary">セキュリティ・キャンプ全国大会2018</a>
+                            <a href="http://www.security-camp.org/" class="btn btn-outline-primary">セキュリティ・キャンプ実施協議会</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	<!--[if lt IE 9]>
-		<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+            <h1 id="central2018">全国大会2018</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2018"></div>
 
-</head>
-<body>
+            <h1 id="central2017">全国大会2017</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2017"></div>
 
-<header>
-	<div class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="/" class="navbar-brand">seccamp.jp</a>
-				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse" id="navbar-main">
-				<ul class="nav navbar-nav">
-					<li><a href="/">Top</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</header>
+            <h1 id="central2016">全国大会2016</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2016"></div>
 
-<div class="container">
-	<h1>seccamp.jpへようこそ！</h1>
-	<p>このドメインは、とあるセキュリティ・キャンプ講師がうっかり取得してしまったものであり、セキュリティ・キャンプの公式サイトではありません。</p>
-	<p>公式サイトは以下のリンクから参照できます。</p>
-	<a href="https://www.ipa.go.jp/jinzai/camp/2017/zenkoku2017.html" class="btn btn-default">セキュリティ・キャンプ全国大会2017</a>
-	<a href="http://www.security-camp.org/" class="btn btn-default">セキュリティ・キャンプ実施協議会</a>
+        </div>
+        <nav class="navbar navbar-light bg-light" style="margin-top: 128px;">
+            <a href="https://github.com/seccamp/seccamp.jp" class="btn btn-outline-primary">Contribute to this site on GitHub</a>
+        </nav>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script>
+        function generateApplicationList(year){
+            $.getJSON(`data/${year}/application.json` , function(data) {
+                var ulObj = $(`#application${year}`);
+                for(var i = 0; i < data.length; i++) {
+                    var d = data[i];
+                    var info_line = $("<small>").text("by " + d.author);
+                    if(d.twitter !== undefined){
+                        info_line.append($("<a>", {href: "https://twitter.com/" + d.twitter, "class": "badge badge-pill badge-light"}).text("@" + d.twitter));
+                    }
+                    ulObj.append(
+                        $("<a>", {href: d.url, "class": "list-group-item list-group-item-action flex-column align-items-start"})
+                            .append($("<div>", {"class": "d-flex w-100 justify-content-between"})
+                                .append($("<h5>", {"class": "mb-1"}).text(d.title))
+                                .append($("<small>").text(d.date)))
+                            .append(info_line));
+                }
+            });
 
-</div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-102613335-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-
-<script type="text/javascript">
-	$('.bs-component [data-toggle="popover"]').popover();
-	$('.bs-component [data-toggle="tooltip"]').tooltip();
-</script>
-
-</body>
+        }
+        $(function() {
+            generateApplicationList(2018);
+            generateApplicationList(2017);
+            generateApplicationList(2016);
+        });
+        </script>
+    </body>
 </html>
