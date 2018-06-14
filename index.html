@@ -76,7 +76,7 @@
                 for(var i = 0; i < data.length; i++) {
                     var d = data[i];
                     var info_line = $("<small>").text("by " + d.author);
-                    if(d.twitter !== undefined){
+                    if(d.twitter !== undefined && d.twitter.length > 0){
                         info_line.append($("<a>", {href: "https://twitter.com/" + d.twitter, "class": "badge badge-pill badge-light"}).text("@" + d.twitter));
                     }
                     ulObj.append(
