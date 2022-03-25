@@ -25,6 +25,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#central2021">全国大会2021</a>
+                            <a class="dropdown-item" href="#next2021">ネクスト2021</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#central2020">全国大会2020</a>
                             <a class="dropdown-item" href="#central2019">全国大会2019</a>
@@ -58,6 +59,10 @@
             <h2>Web上で公開されている応募用紙リスト</h2>
             <div class="list-group" id="application2021"></div>
 
+            <h1 id="next2021">ネクスト2021</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2021next"></div>
+
             <h1 id="central2020">全国大会2020</h1>
             <h2>Web上で公開されている応募用紙リスト</h2>
             <div class="list-group" id="application2020"></div>
@@ -86,9 +91,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
-        function generateApplicationList(year){
-            $.getJSON(`data/${year}/application.json` , function(data) {
-                var ulObj = $(`#application${year}`);
+        function generateApplicationList(year, kind = ''){
+            $.getJSON(`data/${year}/${kind}application.json` , function(data) {
+                var ulObj = $(`#application${year}${kind}`);
                 for(var i = 0; i < data.length; i++) {
                     var d = data[i];
                     var info_line = $("<small>").text("by " + d.author);
@@ -107,6 +112,7 @@
         }
         $(function() {
             generateApplicationList(2021);
+            generateApplicationList(2021, 'next');
             generateApplicationList(2020);
             generateApplicationList(2019);
             generateApplicationList(2018);
