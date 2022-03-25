@@ -24,8 +24,11 @@
                             まとめ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#central2018">全国大会2018</a>
+                            <a class="dropdown-item" href="#central2021">全国大会2021</a>
                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#central2020">全国大会2020</a>
+                            <a class="dropdown-item" href="#central2019">全国大会2019</a>
+                            <a class="dropdown-item" href="#central2018">全国大会2018</a>
                             <a class="dropdown-item" href="#central2017">全国大会2017</a>
                             <a class="dropdown-item" href="#central2016">全国大会2016</a>
                         </div>
@@ -50,6 +53,18 @@
                     </div>
                 </div>
             </div>
+
+            <h1 id="central2021">全国大会2021</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2021"></div>
+
+            <h1 id="central2020">全国大会2020</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2020"></div>
+
+            <h1 id="central2019">全国大会2019</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2019"></div>
 
             <h1 id="central2018">全国大会2018</h1>
             <h2>Web上で公開されている応募用紙リスト</h2>
@@ -91,6 +106,9 @@
 
         }
         $(function() {
+            generateApplicationList(2021);
+            generateApplicationList(2020);
+            generateApplicationList(2019);
             generateApplicationList(2018);
             generateApplicationList(2017);
             generateApplicationList(2016);
