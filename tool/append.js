@@ -3,7 +3,8 @@ const readline = require('readline');
 
 console.log(process.argv[2]);
 if(process.argv.length < 3){
-	console.log(`Usage: ${process.argv[0]} ${process.argv[1]} <path_to_json>`)
+	console.log(`Usage: ${process.argv[0]} ${process.argv[1]} <path_to_json>`);
+	process.exit();
 }
 var data_list = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 console.log(data_list);
@@ -29,11 +30,13 @@ function InputData(){
 						console.log(data);
 						rl.question('Is it ok? (Y/n)', (ans) => {
 							if(["y", "Y", "Yes", "yes", ""].includes(ans)){
-								data_list.push(data);
+								if (url !== '') {
+									data_list.push(data);
+								}
 								data_list.sort((a, b) => {
-									return ((new Date(a["date"])).getTime() < (new Date(b["date"])).getTime());
+									return ((new Date(a["date"])).getTime() - (new Date(b["date"])).getTime());
 								});
-								fs.writeFileSync(process.argv[2], JSON.stringify(data_list, null, " "));
+								fs.writeFileSync(process.argv[2], JSON.stringify(data_list, null, 2) + "\n");
 								console.log("Saved!");
 							} else{
 								console.log("Aborted.");
