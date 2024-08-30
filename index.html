@@ -24,6 +24,7 @@
                             まとめ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#central2024">全国大会2024</a>
                             <a class="dropdown-item" href="#next2024">ネクスト2024</a>
                             <a class="dropdown-item" href="#next2023">ネクスト2023</a>
                             <a class="dropdown-item" href="#central2021">全国大会2021</a>
@@ -56,6 +57,9 @@
                     </div>
                 </div>
             </div>
+            <h1 id="central2024">全国大会2024</h1>
+            <h2>Web上で公開されている応募用紙リスト</h2>
+            <div class="list-group" id="application2024"></div>
 
             <h1 id="next2024">ネクスト2024</h1>
             <h2>Web上で公開されている応募用紙リスト</h2>
@@ -121,6 +125,7 @@
 
         }
         $(function() {
+            generateApplicationList(2024);
             generateApplicationList(2024, 'next');
             generateApplicationList(2023, 'next');
             generateApplicationList(2021);
