@@ -73,6 +73,10 @@
         <h2>Web上で公開されている応募用紙リスト</h2>
         <div class="list-group" id="application2025next"></div>
 
+        <h1 id="next2024">ジュニア2025</h1>
+        <h2>Web上で公開されている応募用紙リスト</h2>
+        <div class="list-group" id="application2025junior"></div>
+
         <h1 id="central2024">全国大会2024</h1>
         <h2>Web上で公開されている応募用紙リスト</h2>
         <div class="list-group" id="application2024"></div>
@@ -148,6 +152,7 @@
         $(function () {
             generateApplicationList(2025);
             generateApplicationList(2025, 'next');
+            generateApplicationList(2025, 'junior');
             generateApplicationList(2024);
             generateApplicationList(2024, 'next');
             generateApplicationList(2023, 'next');
