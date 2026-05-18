@@ -29,9 +29,13 @@
                         まとめ
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#central2025">全国大会2025</a>
+                        <a class="dropdown-item" href="#next2025">ネクスト2025</a>
+                        <a class="dropdown-item" href="#junior2025">ジュニア2025</a>
                         <a class="dropdown-item" href="#central2024">全国大会2024</a>
                         <a class="dropdown-item" href="#next2024">ネクスト2024</a>
                         <a class="dropdown-item" href="#next2023">ネクスト2023</a>
+                        <a class="dropdown-item" href="#central2022">全国大会2022</a>
                         <a class="dropdown-item" href="#central2021">全国大会2021</a>
                         <a class="dropdown-item" href="#next2021">ネクスト2021</a>
                         <div class="dropdown-divider"></div>
@@ -65,15 +69,15 @@
             </div>
         </div>
 
-        <h1 id="central2024">全国大会2025</h1>
+        <h1 id="central2025">全国大会2025</h1>
         <h2>Web上で公開されている応募用紙リスト</h2>
         <div class="list-group" id="application2025"></div>
 
-        <h1 id="next2024">ネクスト2025</h1>
+        <h1 id="next2025">ネクスト2025</h1>
         <h2>Web上で公開されている応募用紙リスト</h2>
         <div class="list-group" id="application2025next"></div>
 
-        <h1 id="next2024">ジュニア2025</h1>
+        <h1 id="junior2025">ジュニア2025</h1>
         <h2>Web上で公開されている応募用紙リスト</h2>
         <div class="list-group" id="application2025junior"></div>
 
@@ -88,6 +92,10 @@
         <h1 id="next2023">ネクスト2023</h1>
         <h2>Web上で公開されている応募用紙リスト</h2>
         <div class="list-group" id="application2023next"></div>
+
+        <h1 id="central2022">全国大会2022</h1>
+        <h2>Web上で公開されている応募用紙リスト</h2>
+        <div class="list-group" id="application2022"></div>
 
         <h1 id="central2021">全国大会2021</h1>
         <h2>Web上で公開されている応募用紙リスト</h2>
@@ -156,6 +164,7 @@
             generateApplicationList(2024);
             generateApplicationList(2024, 'next');
             generateApplicationList(2023, 'next');
+            generateApplicationList(2022);
             generateApplicationList(2021);
             generateApplicationList(2021, 'next');
             generateApplicationList(2020);
